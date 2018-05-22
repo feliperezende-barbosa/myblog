@@ -1,0 +1,21 @@
+<div class="card mb-4" *ngFor="let p of post">
+    
+  <div class="card-body">
+
+    <h2 class="card-title">{{ p.title }}</h2>
+
+    <p class="card-text">{{ p.body }}</p>
+
+    <a [routerLink]="['/post/view/', p.id]" class="btn btn-primary">Read More &rarr;</a>
+
+  </div>
+
+  <div class="card-footer text-muted">
+    
+    Posted on {{ p.created_at | date: 'MMMM d, y' }} by
+
+    <a href="#">{{ p.userName }}</a>
+
+  </div>
+  
+</div>
